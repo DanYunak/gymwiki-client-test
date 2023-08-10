@@ -26,8 +26,6 @@ export const useAppDispatch = () => useDispatch<AppDispatch>()
 
 export type InferActionsTypes<T> = T extends { [key: string]: (...args: any[]) => infer U } ? U : never
 
-// @ts-ignore
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const sagaMiddleware = createSagaMiddleware()
 
 export const store = configureStore({
