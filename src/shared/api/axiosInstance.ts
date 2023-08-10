@@ -1,6 +1,6 @@
 import axios from 'axios'
 
 export const instance = axios.create({
-    baseURL: 'https://gymwiki-server.onrender.com/',
+    baseURL: 'https://gymwiki.onrender.com/api/',
     withCredentials: true
 })
