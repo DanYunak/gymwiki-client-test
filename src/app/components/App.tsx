@@ -38,14 +38,12 @@ export const App = () => {
         {isLoginWindowOpen && <LoginWindow onSubmit={onSubmitLogin} />}
         {isRegistrationWindowOpen && <RegistrationWindow onSubmit={onSubmitRegistration} />}
         <Header />
-        <Suspense>
-          <Routes>
-            <Route path='/exercises' element={<ExercisesPage />} />
-            {/* <Route path='/products' element={<ProductsPage />} /> */}
-            {/* <Route path='/' element={<Navigate to='/products' />} /> */}
-            <Route path='/' element={<ProductsPage />} />
-          </Routes>
-        </Suspense>
+        {/* <Suspense> */}
+        <Routes>
+          <Route path='/exercises' element={<ExercisesPage />} />
+          <Route path='/' element={<ProductsPage />} />
+        </Routes>
+        {/* </Suspense> */}
       </div>
     </div>
   )

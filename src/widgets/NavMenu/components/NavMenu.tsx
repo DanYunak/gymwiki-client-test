@@ -60,7 +60,7 @@ export const NavMenu: FC = () => {
         <nav className='nav'>
             <div className='links'>
                 <NavLink className='nav__link' to='/exercises'>Exercises</NavLink>
-                <NavLink className='nav__link' to='/products'>Store</NavLink>
+                <NavLink className='nav__link' to='/'>Store</NavLink>
             </div>
             {isLoggedIn &&
                 <div className='username'>
