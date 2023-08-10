@@ -1,0 +1,136 @@
+.cart__product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #525252;
+    position: relative;
+    margin-top: 60px;
+    height: 100px;
+
+    &_img {
+        position: absolute;
+        left: 5%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 63%;
+    }
+
+    &_name {
+        color: #e6a200;
+        position: absolute;
+        left: 20%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        text-align: left;
+    }
+
+    &_price {
+        font-weight: 700;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+
+    &_quantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    &_total_price {
+        position: absolute;
+        right: 20%;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    &_delete {
+        position: absolute;
+        right: 10%;
+        top: 0;
+        svg {
+            cursor: pointer;
+            &:hover {
+                fill: #e6a200;
+                transition: fill .5s;
+            }
+        }
+    }
+
+    &:first-child {
+        margin-top: 100px;
+    }
+
+    @media (max-width: 992px) {
+        padding-bottom: 30px;
+        &_name {
+            width: 270px;
+            font-size: 18px;
+            left: 25%;
+        }
+
+        &_info {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_quantity {
+            margin-top: 8px;
+        }
+    }
+
+    @media (max-width: 740px) {
+        &:first-child {
+            margin-top: 60px;
+        }
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+        &_name {
+            font-size: 16px;
+            width: 200px;
+            left: 35%;
+            text-align: left;
+            top: 0;
+        }
+
+        &_delete {
+            right: 2%;
+            top: -15%;
+        }
+
+        &_total_price {
+            bottom: 15%;
+            right: 5%;
+        }
+
+        &_quantity {
+            span {
+                font-size: 17px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

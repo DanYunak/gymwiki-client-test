@@ -1,0 +1,81 @@
+.exercise {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    padding-top: 50px;
+    position: relative;
+    flex-direction: column;
+    width: 200px;
+    height: 275px;
+    border: 1px solid #525252;
+
+    @media (max-width: 740px) {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__info {
+        font-size: 15px;
+        position: absolute;
+        bottom: 25%;
+        left: 5%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        text-align: left;
+    }
+
+    .exercise__name {
+        font-size: 18px;
+        display: flex;
+        width: 225px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .exercise__muscle {
+        width: 200px;
+        position: absolute;
+        color: #fff;
+    }
+
+    .exercise__equipment {
+        position: absolute;
+        margin-top: 50px;
+        width: 200px;
+    }
+
+    .btn__actions {
+        display: flex;
+    }
+
+    .exercise__edit {
+        position: absolute;
+        top: 8px;
+        left: 15px;
+        &_icon {
+            cursor: pointer;
+            @media (min-width: 992px) {
+                &:hover {
+                    opacity: .5;
+                    transition: opacity .6s;
+                }
+            }
+        }
+    }
+
+    .exercise__delete {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        &_icon {
+            @extend .exercise__edit_icon
+        }
+    }
+
+}

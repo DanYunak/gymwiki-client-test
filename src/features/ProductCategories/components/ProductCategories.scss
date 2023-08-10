@@ -1,0 +1,11 @@
+.product__categories {
+    display: flex;
+    color: #fff;
+    &_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

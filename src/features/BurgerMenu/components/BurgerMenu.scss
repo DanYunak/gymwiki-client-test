@@ -1,0 +1,100 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    .nav__link {
+        font-size: 23px;
+    }
+
+    .close {
+        left: 5%;
+        top: 2%;
+
+        @media (max-width: 580px) {
+            right: 87%;
+        }
+
+        @media (max-width: 470px) {
+            right: 85%;
+        }
+    }
+
+    .user__name {
+        color: #fff;
+        position: absolute;
+        top: 2.5%;
+        left: 35%;
+    }
+
+    .nav__auth_burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: 1.7%;
+        right: 5%;
+        padding: 5px;
+        margin-right: 50px;
+    }
+
+    .store__actions {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 10%;
+        left: 0;
+        width: 85%;
+        .btn__actions {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                background-color: #fff3;
+                margin-left: 25px;
+                @media (max-width: 375px) {
+                    margin-left: 15px;
+                }
+            }
+        }
+        
+        .nav__link_store {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-20%);
+        }
+    }
+
+    .exercises__actions {
+        position: absolute;
+        bottom: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-40%);
+        
+        .nav__link {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 740px) {
+        .links,
+        .username,
+        .nav__auth {
+            display: none;
+        }
+
+        .nav__logout {
+            margin-left: 40px;
+        }
+    }
+}

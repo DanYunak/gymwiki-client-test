@@ -1,0 +1,101 @@
+.products {
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    color: #fff;
+    justify-content: center;
+    align-items: start;
+    min-height: calc(100vh - 100px);
+
+    &__actions {
+        position: absolute;
+        right: 0;
+        top: 165px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__cart {
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        
+        &_empty {
+            margin-top: 50px;
+            button {
+                position: absolute;
+                top: 125%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .pagination {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 25px 0;
+
+        button {
+            color: #fff;
+        }
+
+        .css-1v2lvtn-MuiPaginationItem-root {
+            color: #fff;
+        }
+    }
+
+    .create__product {
+        @extend .products__cart;
+        margin-top: 20px;
+    }
+
+    .wish__list {
+        @extend .products__cart;
+        margin-top: 20px;
+    }
+
+    .filter {
+        @extend .products__cart;
+        margin-top: 20px;
+    }
+
+    @media (min-width: 992px) {
+        .products__cart {
+            &:hover {
+                background-color: #fff3;
+                transition: background-color .5s;
+            }
+        }
+    }
+
+    @media (max-width: 650px) {
+        &__actions {
+            display: none;
+        }
+    }
+}

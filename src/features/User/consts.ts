@@ -1,0 +1,13 @@
+export const IS_LOGGED_IN = 'USER/IS_LOGGED_IN'
+export const SET_USER_NAME = 'USER/SET_USER_NAME'
+export const GET_USER = 'USER/GET_USER'
+export const SET_USER_ID = 'USER/SET_USER_ID'
+export const LOGIN = 'USER/LOGIN'
+export const REGISTER = 'USER/REGISTER'
+export const LOGOUT = 'USER/LOGOUT'
+
+
+export const GET_USER_ERROR = 'USER/GET_USER_ERROR'
+export const LOGIN_ERROR = 'USER/LOGIN_ERROR'
+export const REGISTER_ERROR = 'USER/REGISTER_ERROR'
+export const LOGOUT_ERROR = 'USER/LOGOUT_ERROR'

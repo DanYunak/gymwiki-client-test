@@ -1,0 +1,17 @@
+.close {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    svg {
+        font-size: 30px;
+    }
+    @media (min-width: 992px) {
+        &:hover {
+            opacity: .5;
+            transition: opacity .7s;
+        }
+        svg {
+            cursor: pointer;
+        }
+    }
+}
