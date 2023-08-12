@@ -75,7 +75,7 @@ export const BurgerMenu: FC<PropsType> = ({ closeMenu, handleLoginWindow }) => {
                 }
             </div>
             <div className='store__actions'>
-                <NavLink className='nav__link nav__link_store' to='/products' onClick={closeMenu}>Store</NavLink>
+                <NavLink className='nav__link nav__link_store' to='/' onClick={closeMenu}>Store</NavLink>
                 <div className='btn__actions'>
                     <Button variant='contained' size='large' onClick={openCart}>
                         <ShoppingCartIcon />
