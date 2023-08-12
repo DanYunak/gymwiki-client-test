@@ -61,7 +61,7 @@ export const BurgerMenu: FC<PropsType> = ({ closeMenu, handleLoginWindow }) => {
             <div onClick={closeMenu} style={{ color: '#fff' }}>
                 <Close />
             </div>
-            {username !== '' &&
+            {isLoggedIn && username !== '' &&
                 <div className='user__name'>{getUsernameWithoutDomain(username)}</div>
             }
             <div className='nav__auth_burger'>
