@@ -127,17 +127,19 @@ export const Product: FC<PropsType> = ({ product, handleOpenCartWindow, isProduc
                     }
                 </>
                 : <>
-                    <div className='product__buy'>
-                        {isProductInCart || isAddedToCart
-                            ? <Button variant='contained' size='large' onClick={openCart} style={{ backgroundColor: '#00a046' }}>
-                                <ShoppingCartCheckoutIcon />
-                            </Button>
-                            : <Button variant='contained' size='large' onClick={addToCart} className='add__cart'
-                                startIcon={<ShoppingCartIcon />}>
-                                Add to cart
-                            </Button>
-                        }
-                    </div>
+                    {isLoggedIn &&
+                        <div className='product__buy'>
+                            {isProductInCart || isAddedToCart
+                                ? <Button variant='contained' size='large' onClick={openCart} style={{ backgroundColor: '#00a046' }}>
+                                    <ShoppingCartCheckoutIcon />
+                                </Button>
+                                : <Button variant='contained' size='large' onClick={addToCart} className='add__cart'
+                                    startIcon={<ShoppingCartIcon />}>
+                                    Add to cart
+                                </Button>
+                            }
+                        </div>
+                    }
                 </>
             }
             <div className='product__delete'>

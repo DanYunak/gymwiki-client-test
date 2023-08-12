@@ -9,7 +9,7 @@ function* handleAllProducts() {
         const res: AxiosResponse = yield call(getProductsAPI)
         yield put(appActions.setIsLoading(true))
         yield put(actions.setAllProducts(res.data))
-        // yield put(appActions.setIsLoading(false))
+        yield put(appActions.setIsLoading(false))
     } catch {
         yield put({ type: SET_ALL_PRODUCTS_ERROR, error: 'Error fetching all products' })
     }
