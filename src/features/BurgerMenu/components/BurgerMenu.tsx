@@ -29,6 +29,7 @@ export const BurgerMenu: FC<PropsType> = ({ closeMenu, handleLoginWindow }) => {
 
     const logout = () => {
         dispatch(actions.logout())
+        closeMenu()
     }
 
     const openCart = () => {
